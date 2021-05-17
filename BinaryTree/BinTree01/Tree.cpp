@@ -89,19 +89,30 @@ void Tree::_bshow(Node *node, std::string heranca) {
 }
 
 int Tree::size() { //TODO
-    
+     _size(_root);
 }
 
 int Tree::_size(Node *node) { // TODO
-    
+    int c = 1;
+    if(node == nullptr){
+        return 0;
+    }else{
+        c += _size(node->left);
+        c += _size(node->right);
+        return c;
+    }
+
+
 }
 
-int Tree::height() { // TODO
-
+int Tree::height() {
+     _height(_root);
 }
 
 int Tree::_height(Node *node) { // TODO
-    
+    if(node == nullptr){
+        return 0;
+    }
 }
 
 
