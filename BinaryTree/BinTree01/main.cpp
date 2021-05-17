@@ -16,7 +16,7 @@ int main()
 
     while(quit != true){
 
-        cout << " Digite 1 para realizar percurso em ordem - 2 para exibir arvore - 3 para calcular numero de nós - 4 para calcular altura da arvore - 5 para sair  " << endl;
+        cout << " Digite 1 para realizar percurso em ordem - 2 para exibir arvore - 3 para calcular numero de nos - 4 para calcular altura da arvore - 5 para sair  " << endl;
         cin >> opt;
         switch (opt)
         {
@@ -27,10 +27,13 @@ int main()
             bt.bshow();
             break;
          case 3:
-            bt.size();
+            cout << " A arvore possui o seguinte numero de nos: " << endl;
+            cout << bt.size() << endl;
+            
             break;
          case 4:
-            bt.height();
+            cout << " A arvore possui a seguinte altura: " << endl;
+            cout << bt.height() << endl;
             break;
          case 5:
             quit = true;
