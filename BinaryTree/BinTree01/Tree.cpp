@@ -112,6 +112,13 @@ int Tree::height() {
 int Tree::_height(Node *node) { // TODO
     if(node == nullptr){
         return 0;
+    }else{
+        int lHeight = _height(node->left);
+        int rHeight = _height(node->right);
+     
+        if (lHeight > rHeight)
+            return(lHeight + 1);
+        else return(rHeight + 1);
     }
 }
 
